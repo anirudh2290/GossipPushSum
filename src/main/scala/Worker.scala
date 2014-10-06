@@ -21,6 +21,7 @@ object Worker {
   case class startPushSumCalculation()
   case class sendCalculation()
   case class receiveCalculation(sum: Double, weight: Double)
+  case class appendNeighbours(neighbour: ActorRef)
   /*
   def props(neighbourList: ArrayBuffer[ActorRef]):Props =
     Props(classOf[Worker], neighbourList)
@@ -64,6 +65,7 @@ on begin*/
     case setNeighbours(neighboursList: ArrayBuffer[ActorRef]) => setNeighbours(neighboursList)
     /*Added by Anirudh Subramanian for neighbour addition End*/
     case getNeighbours() =>returnNeighbours (sender)
+    case appendNeighbours(neighbour: ActorRef) => appendNeighbours(neighbour)
     case startGossiping(msg: String) => startGossip (msg)
     case hearGossiping(msg: String) => hearGossip(msg)
     case doGossiping(msg: String)   => doGossip(msg)
@@ -80,6 +82,10 @@ on begin*/
     //visitedNeighboursList -= act.path.name.toInt
   }
   */
+  private def appendNeighbours(neighbour: ActorRef): Unit = {
+    neighboursList += neighbour
+  }
+
   /*Push sum methods*/
 
 

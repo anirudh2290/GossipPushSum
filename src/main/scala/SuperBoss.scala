@@ -211,6 +211,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
           neighbours += neighbourList(randomNeighbour(0))(randomNeighbour(1))
 
           actorsList(noOfColumns*i + j) ! setNeighbours(neighbours)
+          actorsList(noOfColumns*randomNeighbour(0) + randomNeighbour(1)) ! appendNeighbours(neighbourList(i)(j))
 
           includeBottom = true
           includeTop    = true

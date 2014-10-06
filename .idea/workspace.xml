@@ -36,16 +36,16 @@
       <file leaf-file-name="SuperBoss.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/SuperBoss.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1167" max-vertical-offset="6783">
-              <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+            <state vertical-scroll-proportion="-5.821429" vertical-offset="3509" max-vertical-offset="6800">
+              <caret line="216" column="29" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
               <folding>
                 <element signature="e#0#62#0" expanded="true" />
                 <element signature="e#1847#1851#0" expanded="true" />
                 <element signature="e#2331#2335#0" expanded="true" />
                 <element signature="e#2630#2634#0" expanded="true" />
                 <element signature="e#3393#3397#0" expanded="true" />
-                <element signature="e#7194#7198#0" expanded="true" />
-                <element signature="e#7484#7488#0" expanded="true" />
+                <element signature="e#7308#7312#0" expanded="true" />
+                <element signature="e#7598#7602#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -54,19 +54,20 @@
       <file leaf-file-name="Worker.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Worker.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67045456" vertical-offset="1838" max-vertical-offset="7293">
-              <caret line="122" column="14" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.6236842" vertical-offset="1429" max-vertical-offset="7395">
+              <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
               <folding>
                 <element signature="e#0#31#0" expanded="true" />
-                <element signature="e#3264#3268#0" expanded="true" />
-                <element signature="e#3595#3599#0" expanded="true" />
-                <element signature="e#4675#4679#0" expanded="true" />
-                <element signature="e#5038#5042#0" expanded="true" />
-                <element signature="e#6054#6058#0" expanded="true" />
-                <element signature="e#6279#6283#0" expanded="true" />
-                <element signature="e#6574#6578#0" expanded="true" />
-                <element signature="e#6697#6701#0" expanded="true" />
-                <element signature="e#6902#6906#0" expanded="true" />
+                <element signature="e#3391#3395#0" expanded="true" />
+                <element signature="e#3492#3496#0" expanded="true" />
+                <element signature="e#3823#3827#0" expanded="true" />
+                <element signature="e#4903#4907#0" expanded="true" />
+                <element signature="e#5266#5270#0" expanded="true" />
+                <element signature="e#6282#6286#0" expanded="true" />
+                <element signature="e#6507#6511#0" expanded="true" />
+                <element signature="e#6802#6806#0" expanded="true" />
+                <element signature="e#6925#6929#0" expanded="true" />
+                <element signature="e#7130#7134#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,8 +86,8 @@
         <option value="$PROJECT_DIR$/build.sbt" />
         <option value="$PROJECT_DIR$/src/main/scala/project2.scala" />
         <option value="$PROJECT_DIR$/src/main/resources/application.conf" />
-        <option value="$PROJECT_DIR$/src/main/scala/SuperBoss.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Worker.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/SuperBoss.scala" />
       </list>
     </option>
   </component>
@@ -460,7 +461,7 @@
     <configuration default="false" name="project2" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="project2" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="16 2D push-sum" />
+      <option name="PROGRAM_PARAMETERS" value="16 imp2D push-sum" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -556,7 +557,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3283082" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3132137" sideWeight="0.50075644" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2675367" sideWeight="0.50075644" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3360522" sideWeight="0.49924356" order="10" side_tool="false" content_ui="tabs" />
@@ -567,7 +568,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26096824" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3132137" sideWeight="0.49924356" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2675367" sideWeight="0.49924356" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -638,35 +639,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/SuperBoss.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1167" max-vertical-offset="6783">
-          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+        <state vertical-scroll-proportion="-5.821429" vertical-offset="3509" max-vertical-offset="6800">
+          <caret line="216" column="29" selection-start-line="216" selection-start-column="29" selection-end-line="216" selection-end-column="29" />
           <folding>
             <element signature="e#0#62#0" expanded="true" />
             <element signature="e#1847#1851#0" expanded="true" />
             <element signature="e#2331#2335#0" expanded="true" />
             <element signature="e#2630#2634#0" expanded="true" />
             <element signature="e#3393#3397#0" expanded="true" />
-            <element signature="e#7194#7198#0" expanded="true" />
-            <element signature="e#7484#7488#0" expanded="true" />
+            <element signature="e#7308#7312#0" expanded="true" />
+            <element signature="e#7598#7602#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Worker.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67045456" vertical-offset="1838" max-vertical-offset="7293">
-          <caret line="122" column="14" selection-start-line="122" selection-start-column="14" selection-end-line="122" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.6236842" vertical-offset="1429" max-vertical-offset="7395">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <element signature="e#3264#3268#0" expanded="true" />
-            <element signature="e#3595#3599#0" expanded="true" />
-            <element signature="e#4675#4679#0" expanded="true" />
-            <element signature="e#5038#5042#0" expanded="true" />
-            <element signature="e#6054#6058#0" expanded="true" />
-            <element signature="e#6279#6283#0" expanded="true" />
-            <element signature="e#6574#6578#0" expanded="true" />
-            <element signature="e#6697#6701#0" expanded="true" />
-            <element signature="e#6902#6906#0" expanded="true" />
+            <element signature="e#3391#3395#0" expanded="true" />
+            <element signature="e#3492#3496#0" expanded="true" />
+            <element signature="e#3823#3827#0" expanded="true" />
+            <element signature="e#4903#4907#0" expanded="true" />
+            <element signature="e#5266#5270#0" expanded="true" />
+            <element signature="e#6282#6286#0" expanded="true" />
+            <element signature="e#6507#6511#0" expanded="true" />
+            <element signature="e#6802#6806#0" expanded="true" />
+            <element signature="e#6925#6929#0" expanded="true" />
+            <element signature="e#7130#7134#0" expanded="true" />
           </folding>
         </state>
       </provider>
