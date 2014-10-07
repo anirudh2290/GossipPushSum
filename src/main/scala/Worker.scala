@@ -56,6 +56,7 @@ class Worker(ac: ActorSystem, superBoss: ActorRef) extends Actor {
   var gossipTerminationLimit = one.getString("termination.gossipTermination").toInt
   var currentRound: Int = 0
   var ratioPrev: Double = 0
+  var pushsumcounter: Int = 3
   /*Added by Anirudh Subramanian End*/
 
   def receive = {
@@ -100,23 +101,31 @@ on begin*/
   }
 
   private def receiveCalculations(sum: Double, weight: Double): Unit = {
-    println("Inside receive calculations for " + self.path.name)
+    //println("Inside receive calculations for " + self.path.name)
     currentRound += 1
     var doesConverge:Boolean = false
-    if(currentRound == 3) {
+    /*
+    if(currentRound == 4) {
       currentRound = 0
-
-      var currentRatio: Double = currentSum / currentWeight
-      var diff: Double = currentRatio - ratioPrev
-      if (scala.math.abs(diff) <= 0.0000000001) {
+    */
+    var currentRatio: Double = currentSum / currentWeight
+    var diff: Double = currentRatio - ratioPrev
+    if (scala.math.abs(diff) <= 0.0000000001) {
+        pushsumcounter -= 1
+        if (pushsumcounter == 0) {
           doesConverge = true
-      }
-      println("=================================================")
-      println("diff is " + diff)
-      println("does converge is " + doesConverge)
-      println("=================================================")
-      ratioPrev = currentRatio
+          pushsumcounter = 3
+        }
     }
+    //println("=================================================")
+    //println("Received sum is " + sum + "received weight is " + weight)
+    //println("diff is " + diff)
+    //println("does converge is " + doesConverge)
+    //println("=================================================")
+    ratioPrev = currentRatio
+    /*
+    }
+    */
     if(pushSumStartCount == 0){
       pushSumStartCount += 1
       self ! startPushSum()
@@ -124,7 +133,7 @@ on begin*/
       if(doesConverge) {
         cancellable2.cancel()
         superBoss ! pushSumDone(self.path.name, currentSum/currentWeight)
-        println("Kill yourself")
+        //println("Kill yourself")
         self ! PoisonPill
       } else {
         currentSum = sum + currentSum
@@ -157,12 +166,12 @@ on begin*/
         //if(self.path.name.toInt != 0) {
 
         //}
-        println("Inform super boss")
+        //println("Inform super boss")
         cancellable.cancel()
         gossipStartCount = 0
-        println("name is " + self.path.name)
+        //println("name is " + self.path.name)
         superBoss ! gossipHeard(self.path.name)
-        println("Kill yourself")
+        //println("Kill yourself")
         self ! PoisonPill
       } else {
         //println("Inside receive of :: " + self.path.name)

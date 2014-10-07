@@ -307,7 +307,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
         }
         /*Divya Code Refactor End*/
-        printTopology(actorsList, algorithm)
+        //printTopology(actorsList, algorithm)
 
 
       }
@@ -327,7 +327,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
         }
         /*Divya Code Refactor End*/
-        printTopology(actorsList, algorithm)
+        //printTopology(actorsList, algorithm)
 
 
       }
@@ -338,17 +338,17 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
         val x = scala.math.floor(scala.math.sqrt(updatedNumNodes)).toInt
 
         var neighbourlistLocal = Array.ofDim[ActorRef](x, x)
-        println("Updated nodes are " + x)
+        //println("Updated nodes are " + x)
         for (i <- 0 to (x - 1)) {
           for (j <- 0 to (x - 1)) {
-            println(i*x + j)
+            //println(i*x + j)
             neighbourlistLocal(i)(j) = actorsList(i*(x) + j)
           }
         }
 
         setNeighbours2D(neighbourlistLocal, actorsList, algorithm)
 
-        printTopology(actorsList, algorithm)
+        //printTopology(actorsList, algorithm)
 
         //executeAlgo(algorithm)
       }
@@ -359,16 +359,16 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
         val x = scala.math.floor(scala.math.sqrt(updatedNumNodes)).toInt
 
         var neighbourlistLocal = Array.ofDim[ActorRef](x, x)
-        println("Updated nodes are " + x)
+        //println("Updated nodes are " + x)
         for (i <- 0 to (x - 1)) {
           for (j <- 0 to (x - 1)) {
-            println(i*x + j)
+            //println(i*x + j)
             neighbourlistLocal(i)(j) = actorsList(i*(x) + j)
           }
         }
         setRandomNeighbours2D(neighbourlistLocal, actorsList, algorithm)
 
-        printTopology(actorsList, algorithm)
+        //printTopology(actorsList, algorithm)
 
         //executeAlgo(algorithm)
       }
@@ -376,7 +376,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
     }
 
     println("=====================================================")
-    //executeAlgo(algorithm)
+    executeAlgo(algorithm)
     println("Number of nodes = "+numNodes)
     Future(1 + 2)
      /*Commented by Anirudh Subramanian*/
