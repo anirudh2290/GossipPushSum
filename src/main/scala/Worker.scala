@@ -144,7 +144,7 @@ on begin*/
 
   /*Gossip methods*/
   private def hearGossip(msg: String): Unit = {
-    println("Inside gossip for " + self.path.name)
+    //println("Inside gossip for " + self.path.name)
     superBoss ! countNodes(self.path.name)
     if(gossipStartCount == 0) {
       gossipStartCount += 1
@@ -168,7 +168,7 @@ on begin*/
         //println("Inside receive of :: " + self.path.name)
         //println("Gossip is " + msg)
         //superBoss ! gossipHeard(self.path.name)
-        println("still gossiping name is " + self.path.name)
+        //println("still gossiping name is " + self.path.name)
         gossipHearCount = gossipHearCount + 1
         //self ! doGossiping(msg)
       }

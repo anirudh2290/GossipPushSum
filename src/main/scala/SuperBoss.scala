@@ -30,6 +30,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
   var actorsList: ArrayBuffer[ActorRef] = new ArrayBuffer[ActorRef]
   var msgBroadcast: String = ""
   var gossipersCompleted: ArrayBuffer[Int] = new ArrayBuffer[Int]
+  var startTime: Long = 0
 
   def receive = {
     case setupNodes(numNodes: Int, msgBcast: String, tplgy: String, algorithm: String) => giveWork(sender(), numNodes, msgBcast, tplgy, algorithm)
@@ -43,7 +44,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
     private def countNodes(gossiper: String): Unit = {
       if(!gossipersCompleted.contains(gossiper.toInt)) {
-        println("Gossip heard by " + gossiper)
+        //println("Gossip heard by " + gossiper)
         gossipersCompleted += gossiper.toInt
       }
       if(gossipersCompleted.size == numberNodes) {
@@ -57,7 +58,8 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
     private def pushSumDone(gossiper: String, ratio: Double): Unit = {
       println("Pushsum submitted by " + gossiper)
       println("Pushsum converged")
-      println("Convergence time is  blah blah")
+      println("Convergence time is "+ (System.currentTimeMillis()-startTime).toString+" milliseconds.")
+      //println("Convergence time is  blah blah")
       println("Converged ratio is " + ratio)
       context.stop(self)
     }
@@ -74,7 +76,9 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
       println("Gossip heard by " + gossiper)
       //if (gossipersCompleted.size >= numberNodes - 1) {
       println("Gossip heard by all")
-      println("Convergence time is blah blah")
+      println("Convergence time is "+ (System.currentTimeMillis()-startTime).toString+" milliseconds.")
+
+      //println("Convergence time is blah blah")
       context.stop(self)
       //}
     }
@@ -87,6 +91,9 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
     }
 
     private def executeAlgo(algorithm: String): Unit = {
+
+      startTime = System.currentTimeMillis();
+
       algorithm match {
         case "gossip" => {
            actorsList(0) ! startGossiping(msgBroadcast)
