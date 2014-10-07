@@ -307,7 +307,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
         }
         /*Divya Code Refactor End*/
-        //printTopology(actorsList, algorithm)
+        printTopology(actorsList, algorithm)
 
 
       }
@@ -327,7 +327,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
         }
         /*Divya Code Refactor End*/
-        //printTopology(actorsList, algorithm)
+        printTopology(actorsList, algorithm)
 
 
       }
@@ -348,7 +348,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
 
         setNeighbours2D(neighbourlistLocal, actorsList, algorithm)
 
-        //printTopology(actorsList, algorithm)
+        printTopology(actorsList, algorithm)
 
         //executeAlgo(algorithm)
       }
@@ -368,7 +368,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
         }
         setRandomNeighbours2D(neighbourlistLocal, actorsList, algorithm)
 
-        //printTopology(actorsList, algorithm)
+        printTopology(actorsList, algorithm)
 
         //executeAlgo(algorithm)
       }
@@ -376,7 +376,7 @@ class SuperBoss(numberNodes: Int, ac: ActorSystem) extends Actor {
     }
 
     println("=====================================================")
-    executeAlgo(algorithm)
+    //executeAlgo(algorithm)
     println("Number of nodes = "+numNodes)
     Future(1 + 2)
      /*Commented by Anirudh Subramanian*/

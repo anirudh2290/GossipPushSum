@@ -57,6 +57,7 @@ class Worker(ac: ActorSystem, superBoss: ActorRef) extends Actor {
   var currentRound: Int = 0
   var ratioPrev: Double = 0
   var pushsumcounter: Int = 3
+  var prevRound: Int = 0
   /*Added by Anirudh Subramanian End*/
 
   def receive = {
@@ -93,15 +94,24 @@ on begin*/
   private def startPushSum(): Unit = {
     import ac.dispatcher
     pushSumStartCount += 1
+    /*
     if(currentRound == 0) {
       currentRound += 1
+    */
       ratioPrev = currentSum / currentWeight
+    /*
     }
+    */
     cancellable2 = ac.scheduler.schedule(0 milliseconds, 1 milliseconds, self, sendCalculation())
   }
 
   private def receiveCalculations(sum: Double, weight: Double): Unit = {
     //println("Inside receive calculations for " + self.path.name)
+    if(pushSumStartCount == 0){
+      pushSumStartCount += 1
+      self ! startPushSum()
+    } else {
+
     currentRound += 1
     var doesConverge:Boolean = false
     /*
@@ -117,6 +127,9 @@ on begin*/
           pushsumcounter = 3
         }
     }
+    else {
+      pushsumcounter = 3
+    }
     //println("=================================================")
     //println("Received sum is " + sum + "received weight is " + weight)
     //println("diff is " + diff)
@@ -126,10 +139,7 @@ on begin*/
     /*
     }
     */
-    if(pushSumStartCount == 0){
-      pushSumStartCount += 1
-      self ! startPushSum()
-    } else {
+
       if(doesConverge) {
         cancellable2.cancel()
         superBoss ! pushSumDone(self.path.name, currentSum/currentWeight)
