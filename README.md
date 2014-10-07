@@ -41,7 +41,9 @@ sbt runMain project1 numNodes topology algorithm
 Note
 ----------------------------------------------------------------------------
 
-Please refer to excel sheet in the project root folder for our test results and the number of bitcoins mined for various inputs
+Please refer to excel sheet in the project root folder for our test results 
+
+The largest network we tried for is 10000 nodes on a dual core machine for all the topologies and algorithms
 
 Details:
 ----------------------------------------------------------------------------
